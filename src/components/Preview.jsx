@@ -41,6 +41,9 @@ const Preview = () => {
                 sandbox="allow-scripts"
                 style={{ width: '100%', height: '100vh', border: 'none' }}
             />
+            console.log("Html:" + html);
+            console.log("Css:" + css);
+            console.log("Js:" + js);
         </div>
     );
 };
