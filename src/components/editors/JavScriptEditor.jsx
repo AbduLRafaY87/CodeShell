@@ -26,7 +26,7 @@ const JsEditor = () => {
     return (
         <div className="editor js">
             <div className="head">
-                <p><i className="fa-brands fa-js" /> script.js</p>
+                <p><i id='jsIcon' className="fa-brands fa-js" /> script.js</p>
                 <div className="buttons">
                     <button onClick={() => setJs(document.querySelector('#js')?.value || '')}>Save</button>
                     <button onClick={() => setJs('')}>Clear</button>
