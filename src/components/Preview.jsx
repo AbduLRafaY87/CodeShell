@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-const Preview = () => {
+const Preview = ({ width }) => {
+    const location = useLocation();
+  
+    const isPreviewPage = location.pathname === '/preview';
+    const previewStyle = {
+      width: isPreviewPage ? '100vw' : width || '45vw',
+    };
     const [srcDoc, setSrcDoc] = useState("");
+
+    
 
     useEffect(() => {
         const updatePreview = () => {
@@ -32,10 +41,11 @@ const Preview = () => {
     }, []);
 
     return (
-        <div className="preview">
+        <div className="preview" style={previewStyle}>
             <div className="previewHead">
                 {/* <i class="fa-solid fa-rotate-right"></i> */}
-                <p><i className="fa-solid fa-shield"></i> https://www.codeshell.chatriwala.com/preview <i className="fa-solid fa-star"></i></p>
+                {/* <p> https://www.codeshell.chatriwala.com/preview <i className="fa-solid fa-star"></i></p> */}
+                <Link to="/preview" target='_blank' className="previewLink"><i className="fa-solid fa-shield"></i>https://www.codeshell.chatriwala.com/preview<i className="fa-solid fa-eye"></i></Link>
 
             </div>
             <iframe

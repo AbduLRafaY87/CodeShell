@@ -45,6 +45,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="sidebarFooter">
+                {/* <p></p> */}
                 <p >
                         <select id="themeSelect" value={theme} onChange={handleThemeChange}>
                             {/* <option value="" hidden>Default</option> */}
@@ -58,7 +59,7 @@ const Sidebar = () => {
                             <option value="theme-sunset">Sunset-Theme</option>
                         </select>
                 </p>
-                <p>© 2023 CodeShell</p>
+                <p>© 2025 CodeShell</p>
                 <p>Version 1.0.0</p>
                 <p>Made with <i className="fa-solid fa-heart"></i> by Chatriwala</p>
                 {/* <p><i className="fa-solid fa-copyright"></i> 2023</p> */}

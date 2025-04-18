@@ -154,17 +154,20 @@
 
 /* Add more themes if you like */
 
+body{
+  background-color: var(--bg-container);
+}
 
 .container {
   background-color: var(--bg-container);
   font-size: 1.5em;
   display: flex;
   flex-direction: column;
-  height: 99vh;
-  width: 99.5vw;
+  height: 100vh;
+  width: 100vw;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--preview-head-bg) !important;
+  border: 1px solid var(--bg-container) !important;
 }
 
 @media (max-width: 1400px) {
@@ -514,21 +517,23 @@
   justify-content: center;
   gap: 5px;
   /* gap: 10px; */
+  margin-right: 3px;
 }
 
+
 .editor .head button:hover{
-  filter: grayscale(0.3);
+  filter: grayscale(0.5);
 }
 .editor .head button {
   background-color: var(--editor-button-bg);
-  border-left: 1px solid var(--accent-border) !important;
+  /* borde: 1px solid var(--accent-border) !important; */
   color: #ffffff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 11px 15px;
+  border-radius: 1px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  /* height: 100%; */
+  height: 100%;
   font-size: .7rem;
 }
 
@@ -559,16 +564,21 @@
   text-align: center;
 }
 
-.previewHead p i {
-  color: #fff;
-  /* background-color: #eaeaea; */
-  padding: 5px 5px;
+.previewHead a i {
+  color: var(--preview-head-border);
+  background-color: var(--preview-head-bg);
+  padding: 8px 7px;
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.previewHead p {
+.previewHead a {
   border: 1px solid #eaeaea;
   background-color: #ebebeb;
+  text-decoration: none;
   padding: 5px 5px;
   border-radius: 20px;
   display: flex;

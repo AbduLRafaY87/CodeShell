@@ -19,10 +19,10 @@ createRoot(rootElement).render(
     <Routes>
       {/* Route for "How to Use" page with only Header and HowToUse */}
       <Route
-        path="/how-to-use"
+        path="/preview"
         element={
           <>
-            <Headers />
+            <div className='container'><Preview width="100vw" /></div>
             {/* <HowToUse /> */}
           </>
         }
