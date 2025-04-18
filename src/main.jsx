@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import './index.css';
-
+import './App.jsx';
 import Headers from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Preview from './components/Preview.jsx';

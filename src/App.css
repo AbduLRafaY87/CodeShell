@@ -428,19 +428,8 @@
   cursor: pointer;
 }
 
-.sidebarContent ul {
-  list-style: none;
-  /* background-color: #1F2428; */
-  /* width: 100%; */
-  /* padding: 10px; */
-  margin: 0;
-  text-align: left;
-}
 
-.sidebarContent ul li {
-  /* background-color: #070827; */
-  margin: 5px 0px;
-}
+
 
 .sidebarContent ul li a {
   text-decoration: none;
@@ -478,13 +467,13 @@
 
 }
 
-.sidebarFooter p ul select {
+.sidebarFooter p select {
   background-color: transparent;
   border: none;
   color: white;
   width: 100%;
   /* padding: 4px 8px; */
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-family: inherit;
   outline: none;
   /* appearance: none; */
@@ -492,7 +481,7 @@
   font-style: italic;
 }
 
-.sidebarFooter p ul select option {
+.sidebarFooter p select option {
   background-color: var(--sidebar-header-bg);
   /* or another visible bg */
   color: white;

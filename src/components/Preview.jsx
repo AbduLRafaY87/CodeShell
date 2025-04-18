@@ -8,9 +8,9 @@ const Preview = () => {
             const html = localStorage.getItem('html') || "";
             const css = localStorage.getItem('css') || "";
             const js = localStorage.getItem('js') || "";
-            console.log("Html:" + html);
-            console.log("Css:" + css);
-            console.log("Js:" + js);
+            // console.log("Html:" + html);
+            // console.log("Css:" + css);
+            // console.log("Js:" + js);
             const finalCode = `
         <html>
           <head><style>${css}</style></head>
