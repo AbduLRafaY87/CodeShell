@@ -61,10 +61,10 @@ const Header = () => {
 
       <nav className={`navLinks ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link to="#">Developer Info</Link></li>
-          <li><Link to="#">How to Use</Link></li>
-          <li><Link to="#">Report Bug</Link></li>
-          <li><Link to="#">GitHub Repo</Link></li>
+          <li><Link to="https://www.linkedin.com/in/abdul-rafay-sajjad/" target='_blank'>Developer Info</Link></li>
+          <li><Link to="https://github.com/AbduLRafaY87/CodeShell?tab=readme-ov-file#%EF%B8%8F-how-to-use-codeshell" target='_blank'>How to Use</Link></li>
+          <li><Link to="https://github.com/AbduLRafaY87/CodeShell/issues/new" target='_blank'>Report Bug</Link></li>
+          <li><Link to="https://github.com/AbduLRafaY87/CodeShell" target='_blank'>GitHub Repo</Link></li>
         </ul>
       </nav>
     </header>

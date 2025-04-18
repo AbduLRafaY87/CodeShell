@@ -1,41 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/assets/logo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeShell | Designed & Developed by Chatriwala</title>
+
+  <!-- SEO Meta Tags -->
+  <title>CodeShell - In-Browser HTML, CSS & JS Code Editor</title>
+  <meta name="description"
+    content="CodeShell is a lightweight, fast, and powerful online HTML, CSS, and JavaScript code editor with live preview and local save options." />
+  <meta name="keywords"
+    content="HTML Editor, CSS Editor, JavaScript Editor, Online Code Editor, CodeShell, Web Development, Live Preview" />
+  <meta name="author" content="Abdul Rafay" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="CodeShell - In-Browser Code Editor" />
+  <meta property="og:description"
+    content="Write, save, and preview your HTML, CSS, and JS code instantly online using CodeShell." />
+  <meta property="og:image" content="https://yourdomain.com/cover.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CodeShell - In-Browser Code Editor" />
+  <meta name="twitter:description"
+    content="Create and preview HTML, CSS, and JS code online instantly with CodeShell." />
+  <meta name="twitter:image" content="https://yourdomain.com/cover.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.jpg" type="image/x-icon" />
+
+  <!-- Font & Styling (Optional: Replace with Tailwind, etc.) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/index.css" />
+
+  <!-- Manifest for PWA support -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourdomain.com/" />
 </head>
 
-<body>
+<body class="bg-black text-white font-mono">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+
+  <!-- Main JS -->
   <script type="module" src="/src/main.jsx"></script>
-  <script>
-    const select = document.getElementById("themeSelect");
-
-    select.addEventListener("change", () => {
-      document.body.className = select.value; // Applies theme class
-    });
-    // Load saved theme
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.body.className = savedTheme;
-      document.getElementById("themeSelect").value = savedTheme;
-    }
-
-    // Save theme on change
-    select.addEventListener("change", () => {
-      const selectedTheme = select.value;
-      document.body.className = selectedTheme;
-      localStorage.setItem("theme", selectedTheme);
-    });
-
-  </script>
-
 </body>
 
 </html>
