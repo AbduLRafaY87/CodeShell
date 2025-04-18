@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeShell | Designed & Developed by Chatriwala</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const select = document.getElementById("themeSelect");
+
+    select.addEventListener("change", () => {
+      document.body.className = select.value; // Applies theme class
+    });
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.body.className = savedTheme;
+      document.getElementById("themeSelect").value = savedTheme;
+    }
+
+    // Save theme on change
+    select.addEventListener("change", () => {
+      const selectedTheme = select.value;
+      document.body.className = selectedTheme;
+      localStorage.setItem("theme", selectedTheme);
+    });
+
+  </script>
+
+</body>
+
+</html>
