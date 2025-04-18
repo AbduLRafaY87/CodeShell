@@ -8,7 +8,9 @@ const Preview = () => {
             const html = localStorage.getItem('html') || "";
             const css = localStorage.getItem('css') || "";
             const js = localStorage.getItem('js') || "";
-
+            console.log("Html:" + html);
+            console.log("Css:" + css);
+            console.log("Js:" + js);
             const finalCode = `
         <html>
           <head><style>${css}</style></head>
@@ -17,6 +19,7 @@ const Preview = () => {
             <script>${js}<\/script>
           </body>
         </html>
+        
       `;
 
             setSrcDoc(finalCode);
@@ -32,7 +35,7 @@ const Preview = () => {
         <div className="preview">
             <div className="previewHead">
                 {/* <i class="fa-solid fa-rotate-right"></i> */}
-                <p><i class="fa-solid fa-shield"></i> https://www.codeshell.chatriwala.com/preview <i class="fa-solid fa-star"></i></p>
+                <p><i className="fa-solid fa-shield"></i> https://www.codeshell.chatriwala.com/preview <i className="fa-solid fa-star"></i></p>
 
             </div>
             <iframe
@@ -41,9 +44,8 @@ const Preview = () => {
                 sandbox="allow-scripts"
                 style={{ width: '100%', height: '100vh', border: 'none' }}
             />
-            console.log("Html:" + html);
-            console.log("Css:" + css);
-            console.log("Js:" + js);
+
+
         </div>
     );
 };

@@ -5,7 +5,7 @@ import '../App.css';
 
 const Sidebar = () => {
 
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "Sunset-Theme");
 
     useEffect(() => {
         document.body.className = theme;
@@ -46,20 +46,17 @@ const Sidebar = () => {
             </div>
             <div className="sidebarFooter">
                 <p >
-                    <ul>
                         <select id="themeSelect" value={theme} onChange={handleThemeChange}>
                             {/* <option value="" hidden>Default</option> */}
-                            <option value="dark-theme">Dark <b><i>Theme</i></b></option>
-                            <option value="theme-ocean">Ocean <b><i>Theme</i></b></option>
-                            <option value="theme-galaxy">Galaxy <b><i>Theme</i></b></option>
-                            <option value="theme-mint">Mint <b><i>Theme</i></b></option>
-                            <option value="theme-cyberpunk">Cyberpunk <b><i>Theme</i></b></option>
-                            <option value="theme-forest">Forest <b><i>Theme</i></b></option>
-                            <option value="theme-solarized" selected>Solarized <b><i>Theme</i></b></option>
-                            <option value="theme-sunset">Sunset <b><i>Theme</i></b></option>
+                            <option value="dark-theme">Dark-Theme</option>
+                            <option value="theme-ocean">Ocean-Theme</option>
+                            <option value="theme-galaxy">Galaxy-Theme</option>
+                            <option value="theme-mint">Mint-Theme</option>
+                            <option value="theme-cyberpunk">Cyberpunk-Theme</option>
+                            <option value="theme-forest">Forest-Theme</option>
+                            <option value="theme-solarized">Solarized-Theme</option>
+                            <option value="theme-sunset">Sunset-Theme</option>
                         </select>
-
-                    </ul>
                 </p>
                 <p>© 2023 CodeShell</p>
                 <p>Version 1.0.0</p>
