@@ -4,9 +4,13 @@ import DownloadAll from '../DownloadAll';
 
 const JsEditor = () => {
     const [js, setJs] = useState(() => localStorage.getItem('js') || '');
+    const [showSavedMessage, setShowSavedMessage] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('js', js);
+        setShowSavedMessage(true);
+        const timeout = setTimeout(() => setShowSavedMessage(false), 1500);
+        return () => clearTimeout(timeout);
     }, [js]);
 
     const handleChange = (newValue) => setJs(newValue);
@@ -33,6 +37,11 @@ const JsEditor = () => {
                     <DownloadAll />
                 </div>
             </div>
+            {showSavedMessage && (
+                <div className="saved-message">
+                    Saving...
+                </div>
+            )}
             <CodeEditor id="js" language="javascript" value={js} onChange={handleChange} />
         </div>
     );

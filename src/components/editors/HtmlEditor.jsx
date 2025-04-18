@@ -4,6 +4,7 @@ import DownloadAll from '../DownloadAll';
 
 const HtmlEditor = () => {
     const defaultHTML = "<h1 id='heading'>Hi, Welcome to <b>CodeShell</b></h1>\n<p>An Online Code Editor by <b>Abdul Rafay Chatriwala</b></p>";
+    const [showSavedMessage, setShowSavedMessage] = useState(false);
 
     const [html, setHtml] = useState(() => {
         const stored = localStorage.getItem('html');
@@ -14,6 +15,9 @@ const HtmlEditor = () => {
 
     useEffect(() => {
         localStorage.setItem('html', html);
+        setShowSavedMessage(true);
+        const timeout = setTimeout(() => setShowSavedMessage(false), 1500);
+        return () => clearTimeout(timeout);
     }, [html]);
 
     const handleChange = (newValue) => setHtml(newValue);
@@ -40,6 +44,11 @@ const HtmlEditor = () => {
                     <DownloadAll />
                 </div>
             </div>
+            {showSavedMessage && (
+                <div className="saved-message">
+                    Saving...
+                </div>
+            )}
             <CodeEditor language="html" value={html} onChange={handleChange} />
         </div>
     );
