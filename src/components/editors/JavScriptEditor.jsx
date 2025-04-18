@@ -3,7 +3,7 @@ import CodeEditor from '../CodeEditor';
 
 const JsEditor = () => {
     const defaultJS = "let heading = document.getElementById('heading') \nheading.addEventListener('click', () => { \n heading.style.color = 'red' \n })";
-    const [js, setJs] = useState(localStorage.getItem('js') || defaultJS);
+    const [js, setJs] = useState(() => localStorage.getItem('js') || defaultJS);
     const [showSavedMessage, setShowSavedMessage] = useState(false);
 
     useEffect(() => {

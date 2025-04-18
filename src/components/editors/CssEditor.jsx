@@ -4,7 +4,7 @@ import CodeEditor from '../CodeEditor';
 const CssEditor = () => {
     const defaultCSS = "h1 { color: blue; }";
     const [showSavedMessage, setShowSavedMessage] = useState(false);
-    const [css, setCss] = useState(localStorage.getItem('css') || defaultCSS);
+    const [css, setCss] = useState(() => localStorage.getItem('css') || defaultCSS);
 
     useEffect(() => {
         localStorage.setItem('css', css);
