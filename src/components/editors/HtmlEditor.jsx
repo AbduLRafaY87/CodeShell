@@ -3,7 +3,7 @@ import CodeEditor from '../CodeEditor';
 import DownloadAll from '../DownloadAll';
 
 const HtmlEditor = () => {
-    const defaultHTML = "<h1 id='heading'>Hello World</h1>\n<p>Click heading to see magic</p>";
+    const defaultHTML = "<h1 id='heading'>Hi, Welcome to CodeShell</h1>\n<p>An Online COde Editor by Abdul Rafay Chatriwala</p>";
 
     const [html, setHtml] = useState(() => {
         const stored = localStorage.getItem('html');
