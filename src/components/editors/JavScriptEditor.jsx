@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CodeEditor from '../CodeEditor';
+import DownloadAll from '../DownloadAll';
 
 const JsEditor = () => {
     const [js, setJs] = useState(() => localStorage.getItem('js') || '');
@@ -29,7 +30,7 @@ const JsEditor = () => {
                 <div className="buttons">
                     <button onClick={() => setJs(document.querySelector('#js')?.value || '')}>Save</button>
                     <button onClick={() => setJs('')}>Clear</button>
-                    <button onClick={handleDownload}>Download</button>
+                    <DownloadAll />
                 </div>
             </div>
             <CodeEditor id="js" language="javascript" value={js} onChange={handleChange} />

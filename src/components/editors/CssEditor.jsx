@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CodeEditor from '../CodeEditor';
+import DownloadAll from '../DownloadAll';
 
 const CssEditor = () => {
     const [css, setCss] = useState(() => localStorage.getItem('css') || '');
@@ -29,7 +30,7 @@ const CssEditor = () => {
                 <div className="buttons">
                     <button onClick={() => setCss(document.querySelector('#css')?.value || '')}>Save</button>
                     <button onClick={() => setCss('')}>Clear</button>
-                    <button onClick={handleDownload}>Download</button>
+                    <DownloadAll />
                 </div>
             </div>
             <CodeEditor id="css" language="css" value={css} onChange={handleChange} />
