@@ -1,12 +1,33 @@
-# React + Vite
+# 🛠️ How to Use CodeShell
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to CodeShell, your in-browser code editor! Here's a quick and simple guide on how to get started:
 
-Currently, two official plugins are available:
+💡 1. Write Your Code  
+Select a language tab (HTML, CSS, or JavaScript).  
+*Start typing your code in the editor. It's fully live and responsive.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+💾 2. Save Your Code  
+Click the "Save" button in each editor panel to store your code in the browser's localStorage.  
+*This means your code stays safe even if you refresh or close the tab — and it will be there the next time you visit!*
 
-## Expanding the ESLint configuration
+❌ 3. Clear Code  
+Want to start fresh? Hit the "Clear" button to remove the current code from the editor.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📄 4. Download Your Code  
+Click "Download" to save your code as `.html`, `.css`, or `.js` files.  
+*Use it later in your own projects, or continue building offline!*
+
+👁️ 5. Live Preview  
+See your changes instantly in the live preview pane.  
+*Any update to HTML, CSS, or JS will reflect immediately in the output.*
+
+🔲 6. Full-Screen Mode  
+Click the "Full-Screen" button to focus completely on your code and preview, without distractions.
+
+🎨 7. Multiple Themes  
+CodeShell supports multiple themes — pick the one that fits your vibe!
+
+💬 Feedback?  
+If you find a bug or have ideas for improvements, use the "Report Bug" option or check the GitHub repo.
+
+**Happy coding! 🚀**
