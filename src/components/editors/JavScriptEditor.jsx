@@ -32,7 +32,7 @@ const JsEditor = () => {
             <div className="head">
                 <p><i id='jsIcon' className="fa-brands fa-js" /> script.js</p>
                 <div className="buttons">
-                    <button onClick={() => setJs(document.querySelector('#js')?.value || '')}>Save</button>
+                    {/* <button onClick={() => setJs(document.querySelector('#js')?.value || '')}>Save</button> */}
                     <button onClick={() => setJs('')}>Clear</button>
                     <DownloadAll />
                 </div>

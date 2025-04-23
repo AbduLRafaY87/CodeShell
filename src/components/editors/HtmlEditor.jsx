@@ -39,7 +39,7 @@ const HtmlEditor = () => {
             <div className="head">
                 <p><i id='htmlIcon' className="fa-brands fa-html5" /> index.html</p>
                 <div className="buttons">
-                    <button onClick={() => setHtml(document.querySelector('#html')?.value || '')}>Save</button>
+                    {/* <button onClick={() => setHtml(document.querySelector('#html')?.value || '')}>Save</button> */}
                     <button onClick={() => setHtml('')}>Clear</button>
                     <DownloadAll />
                 </div>

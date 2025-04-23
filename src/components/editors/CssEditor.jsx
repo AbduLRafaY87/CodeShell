@@ -32,7 +32,7 @@ const CssEditor = () => {
             <div className="head">
                 <p><i id='cssIcon' className="fa-brands fa-css3-alt" /> style.css</p>
                 <div className="buttons">
-                    <button onClick={() => setCss(document.querySelector('#css')?.value || '')}>Save</button>
+                    {/* <button onClick={() => setCss(document.querySelector('#css')?.value || '')}>Save</button> */}
                     <button onClick={() => setCss('')}>Clear</button>
                     <DownloadAll />
                 </div>
